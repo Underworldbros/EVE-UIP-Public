@@ -96,3 +96,6 @@ It balances **optional community contributions** with ethical advertising and su
 - Define ISK contribution workflow (addresses, verification, recognition)  
 - Draft advertising guidelines and integration plan  
 - Track ongoing infrastructure costs to inform voluntary contribution recommendations
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

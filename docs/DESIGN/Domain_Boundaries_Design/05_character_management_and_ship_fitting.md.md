@@ -190,3 +190,6 @@ These outputs are consumed by:
 
 This domain anchors the application in **what the character actually is** —  
 ensuring that every recommendation, calculation, and visualization elsewhere remains grounded in reality.
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

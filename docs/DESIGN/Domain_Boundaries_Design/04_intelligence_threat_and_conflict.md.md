@@ -258,3 +258,6 @@ This domain transforms raw kill data into **contextual awareness**.
 
 It does not tell the user what to do —  
 it explains **who is moving**, **where pressure is building**, and **why outcomes are shifting**.
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

@@ -235,3 +235,6 @@ It intentionally avoids interpretation and optimization logic, serving instead a
 - Define Run Type schemas and extensibility rules
 - Specify cross-domain data propagation (Run → Financial, Assets, Map)
 - Design UI interaction patterns for fast entry and editing
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

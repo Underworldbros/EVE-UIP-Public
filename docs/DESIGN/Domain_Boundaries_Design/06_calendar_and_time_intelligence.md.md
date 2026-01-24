@@ -181,3 +181,6 @@ Likewise, other domains can surface time-bound events into the calendar.
 The Calendar domain ensures that **when things happen** is never disconnected from **why they matter**.
 
 It binds gameplay, economics, conflict, and planning into a coherent temporal framework without imposing workflow or intent.
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

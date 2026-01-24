@@ -269,3 +269,6 @@ This document should be treated as a **directional reference**, not a final spec
 The EVE Online Unified Intelligence Application is intended to grow iteratively into a reliable strategic companion. Its success depends on clear system boundaries, respect for EVE’s data ecosystem, competitive awareness, and sustainable design.
 
 The goal is not to monetize EVE—but to understand it well enough to act intelligently within it.
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

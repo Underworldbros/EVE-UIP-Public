@@ -325,3 +325,6 @@ It connects:
 - How they relate to player behavior and outcomes  
 
 into a system that remains flexible, performant, and entirely under user control.
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

@@ -125,3 +125,6 @@ By adhering to these principles, the application will maintain **clarity, useful
 - Identify module dependencies and interfaces based on modularity and scalability principles  
 - Define heuristics and explanation frameworks for transparency across analytics
 
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

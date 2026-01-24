@@ -268,3 +268,6 @@ These **domain boundaries** define the scope, responsibilities, and interfaces f
 
 Next steps involve **technical architecture mapping**, showing how each domain interacts, the data flow between modules, and persistence/caching strategies.
 
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

@@ -169,3 +169,6 @@ As development progresses:
 - Certain heuristics may evolve or be abandoned entirely
 
 The architecture should remain **adaptable**, **transparent**, and **respectful of player agency**.
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

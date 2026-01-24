@@ -178,3 +178,5 @@ Next steps:
 - Map API rate limits to ingestion schedules  
 - Define module-specific database schemas  
 - Implement backend API contracts for each module
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

@@ -247,3 +247,6 @@ It consolidates market behavior, spending habits, asset valuation, and industria
 **“Where is my ISK coming from, where is it going, and what should I do next?”**
 
 Subsequent documents will define **UI behavior, visual design, and technical implementation details** for each tab and sub-tab.
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

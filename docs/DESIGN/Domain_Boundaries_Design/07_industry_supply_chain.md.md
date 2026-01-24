@@ -137,3 +137,6 @@ Features:
 
 ### Closing Statement
 The Industry & Research domain is the **engine room** of the application. It manages the physical reality of EVE assets—transforming raw materials into value. It ensures the player knows not just *if* they are making money, but *how* to keep the factory running efficiently.
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

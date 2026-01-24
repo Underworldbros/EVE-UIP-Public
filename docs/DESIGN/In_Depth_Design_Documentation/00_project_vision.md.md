@@ -126,3 +126,6 @@ The **Project Vision** is the foundation for all future decisions. It defines **
 - Identify priority modules for Phase 1 development
 - Establish technical stack and data sources
 - Document competitive advantages and gaps
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.

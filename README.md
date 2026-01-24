@@ -185,3 +185,6 @@ The system is intentionally designed to evolve.
 ---
 
 **End of White Paper**
+
+---
+**Proprietary Notice:** This documentation and the EVE Unified Intelligence project are proprietary. Unauthorized distribution, reproduction, or reuse is strictly prohibited.
