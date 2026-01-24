@@ -122,14 +122,14 @@ function App() {
       date: "2026-01-24",
       chapter: "MASTER_SYNC",
       title: "Consolidated Deployment: Foundation to Synthesis",
-      body: "Strategic summary of platform evolution from initial authorization to current three-tier architecture. This update marks the completion of the foundational intelligence layer.",
+      body: "Strategic summary of platform evolution from initial authorization to current architecture. This update marks the completion of the foundational intelligence layer.",
       points: [
         "Project Genesis: Established core FastAPI/React architecture",
         "SDE Authority: Integrated local Static Data Export for zero-latency asset resolution",
         "Financial Module: Deployment of 'Wallet Standard' portfolio analysis",
         "Industrial Expansion: Bill of Materials solver and blueprint intelligence",
-        "Multi-Character Synthesis: Atomic state syncing and contextual character sovereignty",
-        "Tactical Reorganization: Migration to isolated engine/public/management layers"
+        "Tactical Reorganization: Migration to isolated engine/public/management layers",
+        "Temporal Coordination: Time Intelligence module and ESI event ingestion"
       ]
     }
   ]
