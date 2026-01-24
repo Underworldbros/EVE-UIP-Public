@@ -120,29 +120,22 @@ function App() {
   const updates = [
     {
       date: "2026-01-24",
-      chapter: "8",
-      title: "Full SDE Hydration & Schema Expansion",
-      body: "The core engine has achieved a new state of operational readiness. Current deployment focuses on full SDE hydration and schema expansion to enhance platform stability and intelligence throughput.",
+      chapter: "MASTER_SYNC",
+      title: "Consolidated Deployment: Foundation to Synthesis",
+      body: "Strategic summary of platform evolution from initial authorization to current three-tier architecture. This update marks the completion of the foundational intelligence layer.",
       points: [
-        "Full SDE hydration and schema expansion",
-        "Integrate SDE data into Industry, Assets, and Map APIs",
-        "Phase III UI integration and blueprint intelligence refinement",
-        "Finalize production solver financials and UI polish",
-        "Implement three-tier reorganization and management layer"
-      ]
-    },
-    {
-      date: "2026-01-24",
-      chapter: "7",
-      title: "Tactical Reorganization",
-      body: "Platform architecture successfully transitioned to a three-tier deployment model. Isolated core intelligence from public-facing assets.",
-      points: [
-        "Established the 'EVE Dark' Public Landing Page",
-        "Consolidated Design Documentation for community review",
-        "Initialized local management protocols"
+        "Project Genesis: Established core FastAPI/React architecture",
+        "SDE Authority: Integrated local Static Data Export for zero-latency asset resolution",
+        "Financial Module: Deployment of 'Wallet Standard' portfolio analysis",
+        "Industrial Expansion: Bill of Materials solver and blueprint intelligence",
+        "Multi-Character Synthesis: Atomic state syncing and contextual character sovereignty",
+        "Tactical Reorganization: Migration to isolated engine/public/management layers"
       ]
     }
   ]
+
+  const repoUrl = "https://github.com/Underworldbros/EVE-UIP-Public";
+  const docsUrl = `${repoUrl}/blob/main/docs/DESIGN/README.md`;
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-deep-space text-gray-400 relative overflow-hidden">
@@ -198,6 +191,59 @@ function App() {
           <TerminalTicker />
         </section>
 
+        {/* DATA PREVIEW */}
+        <section className="py-20 bg-primary-sidebar/20 relative border-b border-gray-800/50">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="panel-title mb-12 text-center">PORTFOLIO.NET_WORTH // LIVE_SIMULATION</div>
+            
+            <div className="bg-[#0a0a0a] border border-gray-800 p-8 shadow-2xl relative overflow-hidden group hover:border-eve-emerald/40 transition-all">
+              <div className="absolute -top-4 -right-4 transition-all duration-200 rotate-12 pointer-events-none opacity-5 group-hover:opacity-20">
+                <CircleDollarSign size={200} className="text-eve-emerald" />
+              </div>
+
+              <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-12 relative z-10">
+                <div className="text-center flex-1">
+                  <div className="flex items-center justify-center gap-2 text-scc-amber opacity-80 mb-2">
+                    <span className="text-[9px] font-black uppercase tracking-widest">PLEX Vault</span>
+                    <Coins size={18} />
+                  </div>
+                  <div className="text-xl font-bold font-mono text-white">4,250,000,000 <span className="text-[10px] text-gray-600 ml-1 font-black">ISK</span></div>
+                </div>
+
+                <div className="text-center flex-[2] border-x border-gray-800/30 px-8">
+                  <div className="text-xs text-eve-emerald font-black uppercase tracking-tactical mb-2">Portfolio Net Worth</div>
+                  <div className="text-5xl md:text-7xl font-bold font-mono tracking-tight text-white leading-none">
+                    124,402,851,204.00
+                  </div>
+                </div>
+
+                <div className="text-center flex-1">
+                  <div className="flex items-center justify-center gap-2 text-naval-blue opacity-80 mb-2">
+                    <Award size={18} />
+                    <span className="text-[9px] font-black uppercase tracking-widest">Total LP</span>
+                  </div>
+                  <div className="text-xl font-bold font-mono text-white">1,402,000,000 <span className="text-[10px] text-gray-600 ml-1 font-black">ISK</span></div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                {[
+                  { label: 'Liquid', val: '42,402,100,204.00' },
+                  { label: 'Escrow', val: '12,000,000,000.00' },
+                  { label: 'Sells', val: '8,402,000,000.00' },
+                  { label: 'Assets', val: '58,402,000,000.00' },
+                  { label: 'Industry', val: '3,196,751,000.00' }
+                ].map((s, i) => (
+                  <div key={i} className="bg-[#111] p-3 border border-gray-800 flex flex-col items-center justify-center text-center">
+                    <div className="text-[9px] text-gray-600 uppercase font-black tracking-widest mb-1">{s.label}</div>
+                    <div className="text-[11px] font-mono text-gray-400">{s.val} <span className="text-[8px] opacity-50 ml-0.5 uppercase">ISK</span></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* DOMAIN MATRIX GRID */}
         <section id="intel" className="py-24 bg-primary-sidebar/20 border-b border-gray-800/50">
           <div className="max-w-7xl mx-auto px-4">
@@ -243,19 +289,17 @@ function App() {
               {updates.map((update, i) => (
                 <div key={i} className="p-8 border border-gray-800 bg-panel-surface hover:bg-gray-800/10 transition-all group relative overflow-hidden shadow-2xl">
                   <div className="absolute right-0 top-0 p-4 font-mono text-[40px] font-black text-white/[0.02] group-hover:text-white/[0.05] transition-colors leading-none">
-                    CH_{update.chapter}
+                    {update.chapter}
                   </div>
                   <div className="flex justify-between items-start mb-6">
                     <div className="flex flex-col">
                       <span className="font-mono text-[10px] text-eve-emerald mb-1">STAMP // {update.date}</span>
                       <h3 className="text-xl font-black text-white uppercase tracking-tight">{update.title}</h3>
                     </div>
-                    {i === 0 && (
-                      <div className="flex items-center space-x-2 px-2 py-1 bg-eve-emerald/10 border border-eve-emerald/30">
-                        <span className="w-1.5 h-1.5 bg-eve-emerald rounded-full animate-pulse" />
-                        <span className="uppercase text-[8px] font-black tracking-widest text-eve-emerald">LATEST_SIGNAL</span>
-                      </div>
-                    )}
+                    <div className="flex items-center space-x-2 px-2 py-1 bg-eve-emerald/10 border border-eve-emerald/30">
+                      <span className="w-1.5 h-1.5 bg-eve-emerald rounded-full animate-pulse" />
+                      <span className="uppercase text-[8px] font-black tracking-widest text-eve-emerald">MASTER_SIGNAL</span>
+                    </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
@@ -287,13 +331,15 @@ function App() {
               PUBLIC DOCUMENTATION <br />
               <span className="text-gray-700">& ARCHITECTURAL SPECS</span>
             </h2>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-12">
-              <button className="h-12 px-8 bg-white text-deep-space font-black uppercase text-xs tracking-[0.3em] hover:bg-eve-emerald transition-colors flex items-center">
+            <div className="flex justify-center items-center gap-4 mt-12">
+              <a 
+                href={docsUrl} 
+                target="_blank" 
+                rel="noreferrer"
+                className="h-12 px-8 bg-white text-deep-space font-black uppercase text-xs tracking-[0.3em] hover:bg-eve-emerald transition-colors flex items-center"
+              >
                 BROWSE_DOCUMENTS <ExternalLink className="ml-3 w-4 h-4" />
-              </button>
-              <button className="h-12 px-8 border border-gray-800 text-gray-500 font-black uppercase text-xs tracking-[0.3em] hover:bg-gray-800 transition-colors">
-                GITHUB_SOURCE
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -310,7 +356,7 @@ function App() {
             </div>
           </div>
           <div className="flex space-x-6">
-             <a href="https://github.com/Underworldbros/EVE-UIP-Public" target="_blank" rel="noreferrer" className="hover:text-eve-emerald transition-colors flex items-center gap-2">
+             <a href={repoUrl} target="_blank" rel="noreferrer" className="hover:text-eve-emerald transition-colors flex items-center gap-2">
                 <ExternalLink size={10} /> PUBLIC_REPOSITORY
             </a>
             <span>CCP_GAMES // EVE_ONLINE</span>
