@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Terminal, Shield, Activity, Database, ChevronRight, Zap, Box, Compass, Cpu, Globe2, CircleDollarSign, Map, ShieldCheck, ExternalLink, TrendingUp, Award, Coins, Crosshair, Calendar, Factory, BookOpen, UserSearch, Camera, Lock } from 'lucide-react'
+import { Terminal, Shield, Activity, Database, ChevronRight, Zap, Box, Compass, Cpu, Globe2, CircleDollarSign, Map, ShieldCheck, ExternalLink, TrendingUp, Award, Coins, Crosshair, Calendar, Factory, BookOpen, UserSearch, Camera, Lock, X } from 'lucide-react'
 
 const PHRASES = [
   "SYNCHRONIZING WITH TRANQUILITY CLUSTER...",
@@ -58,9 +58,17 @@ const TerminalTicker = () => {
 }
 
 function App() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   // Force scroll to top on mount
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (window.location.hash) {
+      window.history.replaceState(null, null, window.location.pathname);
+    }
+    const timer = setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, 100);
+    return () => clearTimeout(timer);
   }, []);
 
   const domains = [
@@ -141,8 +149,6 @@ function App() {
 
   const repoUrl = "https://github.com/Underworldbros/EVE-UIP-Public";
   const docsUrl = `${repoUrl}/blob/main/docs/DESIGN/README.md`;
-  
-  // Base URL for assets on GitHub Pages
   const baseUrl = import.meta.env.BASE_URL;
 
   return (
@@ -170,7 +176,7 @@ function App() {
       </header>
 
       <main className="flex-grow z-10">
-        {/* HERO AREA with Circular Orbit */}
+        {/* HERO AREA */}
         <section className="relative pt-24 pb-12 border-b border-gray-800/50 flex flex-col items-center overflow-hidden">
            <div className="relative w-64 h-64 flex items-center justify-center mb-12">
             <div className="absolute inset-0 border border-eve-emerald/10 rounded-full animate-spin-slow" />
@@ -297,7 +303,11 @@ function App() {
                 { title: "Mining Intelligence", file: "Mining_Ledger.png", id: "02" },
                 { title: "Neural Simulation", file: "Implant_Sim.png", id: "03" }
               ].map((img, i) => (
-                <div key={i} className="aspect-video bg-[#0c0c0c] border border-gray-800 relative overflow-hidden group">
+                <div 
+                  key={i} 
+                  className="aspect-video bg-[#0c0c0c] border border-gray-800 relative overflow-hidden group cursor-pointer"
+                  onClick={() => setSelectedImage(img)}
+                >
                   <img 
                     src={`${baseUrl}${img.file}`} 
                     alt={img.title}
@@ -322,13 +332,7 @@ function App() {
         {/* STRATEGIC PULSE UPDATES */}
         <section id="pulse" className="py-24 border-b border-gray-800/50">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex justify-between items-end mb-12">
-              <div>
-                <div className="panel-title mb-2">STRATEGIC.PULSE // DEPLOYMENT_LOG</div>
-                <p className="text-[10px] text-gray-600 uppercase font-bold tracking-widest">Authorized synchronization reports from the development core.</p>
-              </div>
-            </div>
-            
+            <div className="panel-title mb-12">STRATEGIC.PULSE // DEPLOYMENT_LOG</div>
             <div className="grid grid-cols-1 gap-6">
               {updates.map((update, i) => (
                 <div key={i} className="p-8 border border-gray-800 bg-panel-surface hover:bg-gray-800/10 transition-all group relative overflow-hidden shadow-2xl">
@@ -388,6 +392,40 @@ function App() {
           </div>
         </section>
       </main>
+
+      {/* FULL-SCREEN ZOOM MODAL */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4 md:p-12 animate-in fade-in duration-300"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-6xl w-full h-full flex flex-col items-center justify-center animate-in zoom-in-95 duration-300">
+            {/* Top Tactical Bar */}
+            <div className="w-full flex justify-between items-center mb-4 border-b border-gray-800 pb-2">
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-eve-emerald rounded-full animate-pulse" />
+                <span className="panel-title !text-white !tracking-widest">{selectedImage.title}</span>
+              </div>
+              <button 
+                onClick={() => setSelectedImage(null)}
+                className="text-gray-500 hover:text-white transition-colors"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            <img 
+              src={`${baseUrl}${selectedImage.file}`} 
+              alt={selectedImage.title}
+              className="max-w-full max-h-[85vh] object-contain shadow-[0_0_50px_rgba(52,211,153,0.1)] border border-gray-800"
+            />
+
+            <div className="mt-6 text-[9px] font-black tracking-[0.4em] text-gray-600 uppercase">
+              // TACTICAL_INTERFACE_DATA_DUMP_COMPLETE //
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* TACTICAL FOOTER */}
       <footer className="h-12 border-t border-gray-800/50 bg-primary-sidebar/80 backdrop-blur-sm shadow-2xl relative z-20">
