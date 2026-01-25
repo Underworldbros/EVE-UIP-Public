@@ -167,10 +167,10 @@ function App() {
       <div className="scanline-move" />
       
       {/* HUD HEADER */}
-      <header className="h-10 flex items-center justify-between px-4 border-b border-gray-800/50 bg-primary-sidebar/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg">
+      <header className="min-h-10 py-2 md:py-0 md:h-10 flex flex-col md:flex-row items-center justify-between px-4 border-b border-gray-800/50 bg-primary-sidebar/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg gap-2 md:gap-0">
         <div className="flex items-center space-x-3">
           <div className="w-1.5 h-1.5 bg-eve-emerald rounded-full animate-pulse shadow-[0_0_8px_#34d399]" />
-          <span className="panel-title !text-white !tracking-widest">EVE // UNIFIED INTELLIGENCE</span>
+          <span className="panel-title !text-white !tracking-widest whitespace-nowrap text-[9px] md:text-[10px]">EVE // UNIFIED INTELLIGENCE</span>
         </div>
         <nav className="hidden md:flex space-x-8 text-[10px] uppercase font-black tracking-tactical text-gray-500">
           <a href="#intel" className="hover:text-eve-emerald transition-colors">Intelligence</a>
@@ -182,19 +182,20 @@ function App() {
           href="https://discord.gg/dTMhyZ5kew" 
           target="_blank" 
           rel="noreferrer"
-          className="h-6 px-3 border border-eve-emerald/30 bg-eve-emerald/5 text-eve-emerald text-[9px] uppercase font-black tracking-widest hover:bg-eve-emerald/20 transition-all flex items-center gap-2"
+          className="h-6 px-3 border border-eve-emerald/30 bg-eve-emerald/5 text-eve-emerald text-[8px] md:text-[9px] uppercase font-black tracking-widest hover:bg-eve-emerald/20 transition-all flex items-center gap-2"
         >
           <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.739 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.419-2.157 2.419z"/>
           </svg>
-          ESTABLISH_NEURAL_LINK
+          <span className="hidden sm:inline">ESTABLISH_NEURAL_LINK</span>
+          <span className="sm:hidden">CONNECT</span>
         </a>
       </header>
 
       <main className="flex-grow z-10">
         {/* HERO AREA */}
-        <section className="relative pt-24 pb-12 border-b border-gray-800/50 flex flex-col items-center overflow-hidden">
-           <div className="relative w-64 h-64 flex items-center justify-center mb-12">
+        <section className="relative pt-12 md:pt-24 pb-8 md:pb-12 border-b border-gray-800/50 flex flex-col items-center overflow-hidden">
+           <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center mb-8 md:mb-12 scale-75 md:scale-100">
             <div className="absolute inset-0 border border-eve-emerald/10 rounded-full animate-spin-slow" />
             <div className="absolute inset-4 border border-dashed border-eve-emerald/20 rounded-full animate-spin-slow-reverse" />
             <div className="relative z-10 text-eve-emerald drop-shadow-[0_0_20px_rgba(52,211,153,0.4)]">
@@ -211,10 +212,10 @@ function App() {
           </div>
 
           <div className="text-center max-w-4xl px-4">
-            <h1 className="text-4xl md:text-6xl font-black tracking-tactical text-white uppercase mb-4">
+            <h1 className="text-2xl min-[400px]:text-3xl md:text-6xl font-black tracking-widest md:tracking-tactical text-white uppercase mb-4 leading-tight">
               UNIFIED <span className="text-eve-emerald">INTELLIGENCE</span> PLATFORM
             </h1>
-            <p className="text-gray-500 text-sm md:text-base font-medium max-w-2xl mx-auto mb-12 tracking-wide uppercase">
+            <p className="text-gray-500 text-[10px] md:text-base font-medium max-w-2xl mx-auto mb-8 md:mb-12 tracking-wide uppercase">
               A high-density intelligence engine designed to consolidate Market, Spatial, and Industrial telemetry into a single unified interface.
             </p>
           </div>
@@ -223,41 +224,41 @@ function App() {
         </section>
 
         {/* DATA PREVIEW */}
-        <section className="py-20 bg-primary-sidebar/20 relative border-b border-gray-800/50">
+        <section className="py-12 md:py-20 bg-primary-sidebar/20 relative border-b border-gray-800/50">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="panel-title mb-12 text-center">PORTFOLIO.NET_WORTH // LIVE_SIMULATION</div>
+            <div className="panel-title mb-8 md:mb-12 text-center">PORTFOLIO.NET_WORTH // LIVE_SIMULATION</div>
             
-            <div className="bg-[#0a0a0a] border border-gray-800 p-8 shadow-2xl relative overflow-hidden group hover:border-eve-emerald/40 transition-all">
-              <div className="absolute -top-4 -right-4 transition-all duration-200 rotate-12 pointer-events-none opacity-5 group-hover:opacity-20">
+            <div className="bg-[#0a0a0a] border border-gray-800 p-4 md:p-8 shadow-2xl relative overflow-hidden group hover:border-eve-emerald/40 transition-all">
+              <div className="absolute -top-4 -right-4 transition-all duration-200 rotate-12 pointer-events-none opacity-5 group-hover:opacity-20 hidden md:block">
                 <CircleDollarSign size={200} className="text-eve-emerald" />
               </div>
 
-              <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-12 relative z-10">
-                <div className="text-center flex-1">
-                  <div className="flex items-center justify-center gap-2 text-scc-amber opacity-80 mb-2">
-                    <span className="text-[9px] font-black uppercase tracking-widest">PLEX Vault</span>
-                    <Coins size={18} />
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-8 md:mb-12 relative z-10">
+                <div className="text-center flex-1 order-2 md:order-1">
+                  <div className="flex items-center justify-center gap-2 text-scc-amber opacity-80 mb-1 md:mb-2">
+                    <span className="text-[8px] md:text-[9px] font-black uppercase tracking-widest">PLEX Vault</span>
+                    <Coins size={14} className="md:w-4 md:h-4" />
                   </div>
-                  <div className="text-xl font-bold font-mono text-white">4,250,000,000 <span className="text-[10px] text-gray-600 ml-1 font-black">ISK</span></div>
+                  <div className="text-lg md:text-xl font-bold font-mono text-white">4,250,000,000 <span className="text-[9px] md:text-[10px] text-gray-600 ml-1 font-black">ISK</span></div>
                 </div>
 
-                <div className="text-center flex-[2] border-x border-gray-800/30 px-8">
-                  <div className="text-xs text-eve-emerald font-black uppercase tracking-tactical mb-2">Portfolio Net Worth</div>
-                  <div className="text-5xl md:text-7xl font-bold font-mono tracking-tight text-white leading-none">
+                <div className="text-center flex-[2] border-y md:border-y-0 md:border-x border-gray-800/30 py-6 md:py-0 md:px-8 order-1 md:order-2 w-full">
+                  <div className="text-[10px] md:text-xs text-eve-emerald font-black uppercase tracking-widest md:tracking-tactical mb-2">Portfolio Net Worth</div>
+                  <div className="text-2xl min-[400px]:text-3xl sm:text-5xl md:text-7xl font-bold font-mono tracking-tight text-white leading-none break-all">
                     124,402,851,204.00
                   </div>
                 </div>
 
-                <div className="text-center flex-1">
-                  <div className="flex items-center justify-center gap-2 text-naval-blue opacity-80 mb-2">
-                    <Award size={18} />
-                    <span className="text-[9px] font-black uppercase tracking-widest">Total LP</span>
+                <div className="text-center flex-1 order-3">
+                  <div className="flex items-center justify-center gap-2 text-naval-blue opacity-80 mb-1 md:mb-2">
+                    <Award size={14} className="md:w-4 md:h-4" />
+                    <span className="text-[8px] md:text-[9px] font-black uppercase tracking-widest">Total LP</span>
                   </div>
-                  <div className="text-xl font-bold font-mono text-white">1,402,000,000 <span className="text-[10px] text-gray-600 ml-1 font-black">ISK</span></div>
+                  <div className="text-lg md:text-xl font-bold font-mono text-white">1,402,000,000 <span className="text-[9px] md:text-[10px] text-gray-600 ml-1 font-black">ISK</span></div>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+              <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 md:gap-3">
                 {[
                   { label: 'Liquid', val: '42,402,100,204.00' },
                   { label: 'Escrow', val: '12,000,000,000.00' },
@@ -265,9 +266,9 @@ function App() {
                   { label: 'Assets', val: '58,402,000,000.00' },
                   { label: 'Industry', val: '3,196,751,000.00' }
                 ].map((s, i) => (
-                  <div key={i} className="bg-[#111] p-3 border border-gray-800 flex flex-col items-center justify-center text-center">
-                    <div className="text-[9px] text-gray-600 uppercase font-black tracking-widest mb-1">{s.label}</div>
-                    <div className="text-[11px] font-mono text-gray-400">{s.val} <span className="text-[8px] opacity-50 ml-0.5 uppercase">ISK</span></div>
+                  <div key={i} className="bg-[#111] p-2 md:p-3 border border-gray-800 flex flex-col items-center justify-center text-center">
+                    <div className="text-[8px] md:text-[9px] text-gray-600 uppercase font-black tracking-widest mb-1">{s.label}</div>
+                    <div className="text-[9px] md:text-[11px] font-mono text-gray-400">{s.val} <span className="text-[7px] md:text-[8px] opacity-50 ml-0.5 uppercase">ISK</span></div>
                   </div>
                 ))}
               </div>
@@ -444,16 +445,16 @@ function App() {
       )}
 
       {/* TACTICAL FOOTER */}
-      <footer className="h-12 border-t border-gray-800/50 bg-primary-sidebar/80 backdrop-blur-sm shadow-2xl relative z-20">
-        <div className="max-w-7xl mx-auto h-full px-4 flex items-center justify-between text-[9px] uppercase font-black tracking-widest text-gray-600">
-          <div className="flex items-center space-x-6">
+      <footer className="min-h-12 py-4 md:py-0 md:h-12 border-t border-gray-800/50 bg-primary-sidebar/80 backdrop-blur-sm shadow-2xl relative z-20">
+        <div className="max-w-7xl mx-auto h-full px-4 flex flex-col md:flex-row items-center justify-between text-[9px] uppercase font-black tracking-widest text-gray-600 gap-4 md:gap-0 text-center md:text-left">
+          <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
             <span>&copy; 2026 EVE_UNIFIED_INTELLIGENCE</span>
             <div className="flex items-center space-x-2">
               <span className="w-1 h-1 bg-eve-emerald rounded-full" />
               <span>TERMINAL_READY</span>
             </div>
           </div>
-          <div className="flex space-x-6">
+          <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
              <a href={repoUrl} target="_blank" rel="noreferrer" className="hover:text-eve-emerald transition-colors flex items-center gap-2 text-gray-600">
                 <ExternalLink size={10} /> PUBLIC_REPOSITORY
             </a>
