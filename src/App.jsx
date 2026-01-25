@@ -244,7 +244,7 @@ function App() {
 
                 <div className="text-center flex-[2] border-y md:border-y-0 md:border-x border-gray-800/30 py-6 md:py-0 md:px-8 order-1 md:order-2 w-full">
                   <div className="text-[10px] md:text-xs text-eve-emerald font-black uppercase tracking-widest md:tracking-tactical mb-2">Portfolio Net Worth</div>
-                  <div className="text-2xl min-[400px]:text-3xl sm:text-5xl md:text-7xl font-bold font-mono tracking-tight text-white leading-none break-all">
+                  <div className="text-xl min-[360px]:text-2xl min-[410px]:text-3xl sm:text-5xl md:text-7xl font-bold font-mono tracking-tight text-white leading-none whitespace-nowrap">
                     124,402,851,204.00
                   </div>
                 </div>
